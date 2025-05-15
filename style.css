@@ -149,3 +149,14 @@
     .contact button:hover {
       background-color: #005fa3;
     }
+    .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-content img {
+  width: 60px;
+  height: auto;
+}
