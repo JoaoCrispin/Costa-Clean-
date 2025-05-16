@@ -58,10 +58,63 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+  <section id="antes-depois" class="section">
+  <h3>Antes e Depois</h3>
+  <div class="slider">
+    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+    
+    <div class="slide active">
+      <img src="img/Cadeira antes .jpg" alt="Antes da limpeza" />
+      <img src="img/Cadeira depois.jpg" alt="Depois da limpeza" />
+    </div>
+
+    <div class="slide">
+      <img src="img/Sofa antes.jpg" alt="Antes da limpeza" />
+      <img src="img/Sofa depois.jpg" alt="Depois da limpeza" />
+    </div>
+
+    <div class="slide">
+      <img src="img/Banco do Carro antes.jpg" alt="Antes da limpeza" />
+      <img src="img/Banco do carro depois.jpg" alt="Depois da limpeza" />
+    </div>
+    <div class="slide">
+      <img src="img/Sofa grande antes.jpg" alt="Antes da limpeza" />
+      <img src="img/Sofa grande depois.jpg" alt="Depois da limpeza" />
+    </div>
+
+
+    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+  </div>
+</section>
+
 
   <footer class="footer">
     <p>&copy;  Todos os direitos reservados.</p>
     <p>Desenvolvido por João Vitor Crispin.</p>
+    <div class="footer-logo">
+      <img src="img/" alt="Logo Costa Clean">
+    </div>
   </footer>
+  <script>
+  let slideAtual = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function mostrarSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function mudarSlide(direcao) {
+    slideAtual += direcao;
+    if (slideAtual < 0) slideAtual = slides.length - 1;
+    if (slideAtual >= slides.length) slideAtual = 0;
+    mostrarSlide(slideAtual);
+  }
+
+  // Inicia com o primeiro slide
+  mostrarSlide(slideAtual);
+</script>
+
 </body>
 </html>
