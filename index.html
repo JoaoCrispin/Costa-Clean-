@@ -31,14 +31,21 @@
     <h3>Nossos Serviços</h3>
     <div class="cards">
       <div class="card">
+         <img src="img/seater-sofa.png" alt="Ícone de sofá" class="service-icon">
         <h4>Limpeza de Sofás</h4>
         <p>Remoção de sujeiras, manchas e odores com produtos específicos e tecnologia de ponta.</p>
+      </div> <div class="card">
+         <img src="img/seat.png" alt="Ícone de banco de carro" class="service-icon">
+        <h4>Limpeza de Bancos de Carros</h4>
+        <p>Higienização profunda , remoção de sujeiras, manchas e odores com produtos específicos com cuidado e eficiência.</p>
       </div>
       <div class="card">
+         <img src="img/double-bed.png" alt="Ícone de Colchões" class="service-icon">
         <h4>Limpeza de Colchões</h4>
         <p>Higienização profunda contra ácaros, bactérias e fungos que afetam sua saúde.</p>
       </div>
       <div class="card">
+         <img src="img/armchair.png" alt="Ícone de poltronas" class="service-icon">
         <h4>Limpeza de Poltronas</h4>
         <p>Renovamos suas poltronas com cuidado e eficiência, preservando o tecido.</p>
       </div>
@@ -51,34 +58,76 @@
   </section>
 
   
-  <section id="antes-depois" class="section">
-  <h3>Antes e Depois</h3>
-  <div class="slider">
-    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-    
-    <div class="slide active">
-      <img src="img/Cadeira antes .jpg" alt="Antes da limpeza" />
-      <img src="img/Cadeira depois.jpg" alt="Depois da limpeza" />
+ <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="img/Cadeira antes .jpg" alt="Antes">
+          <span class="label antes">Antes</span>
+        </div>
+        <div class="image-container">
+          <img src="img/Cadeira depois.jpg"Depois">
+          <span class="label depois">Depois</span>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="img/Banco do Carro antes.jpg" alt="Antes">
+          <span class="label antes">Antes</span>
+        </div>
+        <div class="image-container">
+          <img src="img/Banco do carro depois.jpg" alt="Depois">
+          <span class="label depois">Depois</span>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="img/sofa_antes_900x1600.jpg" alt="Antes">
+          <span class="label antes">Antes</span>
+        </div>
+        <div class="image-container">
+          <img src="img/sofa_depois_900x1600.jpg" alt="Depois">
+          <span class="label depois">Depois</span>
+        </div>
+      </div>
     </div>
-
-    <div class="slide">
-      <img src="img/Sofa antes.jpg" alt="Antes da limpeza" />
-      <img src="img/Sofa depois.jpg" alt="Depois da limpeza" />
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="prevSlide()">❮</button>
+      <button class="carousel-button" onclick="nextSlide()">❯</button>
     </div>
-
-    <div class="slide">
-      <img src="img/Banco do Carro antes.jpg" alt="Antes da limpeza" />
-      <img src="img/Banco do carro depois.jpg" alt="Depois da limpeza" />
-    </div>
-    <div class="slide">
-      <img src="img/Sofa grande antes.jpg" alt="Antes da limpeza" />
-      <img src="img/Sofa grande depois.jpg" alt="Depois da limpeza" />
-    </div>
-
-
-    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
   </div>
-</section>
+  <div class="carousel-dots">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % 3;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + 3) % 3;
+      updateSlide();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlide();
+    }
+  </script>
 <section id="contato" class="contact">
     <h3>Fale Conosco</h3>
     <form>

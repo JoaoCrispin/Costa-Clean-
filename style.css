@@ -313,4 +313,100 @@ nav a:hover {
   width: 24px;
   height: 24px;
 }
- 
+ .service-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  border-radius: 10%;
+  background-color: #f4f9fc;
+  padding: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 119, 204, 0.1);
+  object-fit: contain;
+}.carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .image-container {
+      position: relative;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .label {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .antes { background-color: #444; }
+    .depois { background-color: #005fa3; }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-button {
+      background-color: #005fa3;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color:#005fa3 ;
+    }
