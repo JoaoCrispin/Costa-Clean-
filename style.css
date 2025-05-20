@@ -208,6 +208,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .slide {
@@ -222,9 +223,9 @@ nav a:hover {
 }
 
 .slide img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
+  width: 320px; /* Largura padrão */
+  height: 420px; /* Altura fixa para padronizar */
+  object-fit: cover; /* Garante que preencha sem distorcer */
   border-radius: 0.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -257,3 +258,22 @@ nav a:hover {
   right: 10px;
 }
 
+#antes-depois h3 {
+  text-align: center;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
