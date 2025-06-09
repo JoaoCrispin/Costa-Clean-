@@ -56,6 +56,24 @@
     <h3>Sobre a Costa Clean</h3>
     <p>Somos uma empresa especializada em limpeza de estofados, atuando com responsabilidade, profissionalismo e tecnologia de ponta. Garantimos a satisfação de nossos clientes através de um serviço impecável, com atenção aos detalhes e uso de produtos de qualidade. Atendemos a domicílio e prezamos pelo conforto e bem-estar da sua família.</p>
   </section>
+  <section class="biografia-container">
+  <div class="biografia-img">
+    <img src="img/Costa.jpg" alt="Foto do fundador da Costa Clean" />
+  </div>
+  <div class="biografia-texto">
+    <h2>Sobre Mim</h2>
+    
+    <p>Nome:Guilherme Costa</p>
+    <p>Idade: 18 anos</p>
+    <p>Hobbie:Jogar Bola</p>
+    <p>Cursando Engenharia Civil</p>
+    <p></p>
+
+ 
+
+
+  </div>
+</section>
 <section>
   <h1 class="titulo-centralizado">Antes e Depois de nossos Serviços</h1>
  <div class="carousel">
@@ -66,7 +84,7 @@
           <span class="label antes">Antes</span>
         </div>
         <div class="image-container">
-          <img src="img/Cadeira depois.jpg"Depois">
+          <img src="img/Cadeira depois.jpg" alt="Depois">
           <span class="label depois">Depois</span>
         </div>
       </div>
@@ -82,15 +100,17 @@
       </div>
       <div class="carousel-item">
         <div class="image-container">
-          <img src="img/sofa_antes_900x1600.jpg" alt="Antes">
+          <img src="img/colchao antes .jpg" alt="Antes">
           <span class="label antes">Antes</span>
         </div>
         <div class="image-container">
-          <img src="img/sofa_depois_900x1600.jpg" alt="Depois">
+          <img src="img/colchao dps .jpg" alt="Depois">
           <span class="label depois">Depois</span>
         </div>
       </div>
+      
     </div>
+    
     <div class="carousel-buttons">
       <button class="carousel-button" onclick="prevSlide()">❮</button>
       <button class="carousel-button" onclick="nextSlide()">❯</button>
@@ -151,6 +171,33 @@
 </section>
 </form>
   </section>
+  <section id="depoimentos" style="padding: 3rem 1rem; background-color: #f4f9ff;">
+  <h2 style="text-align: center; color: #0077cc; font-size: 2rem; margin-bottom: 2rem;">Depoimentos de Clientes</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+    <?php
+      $depoimentos = [
+        ["nome" => "Marcos S.", "mensagem" => "Meu sofá parecia novo depois da limpeza! Super indico a Costa Clean.", "estrelas" => 5],
+        ["nome" => "Fernanda A.", "mensagem" => "Atendimento pontual, preço justo e resultado excelente!", "estrelas" => 4],
+        ["nome" => "João L.", "mensagem" => "Achei que teria que trocar meu colchão, mas eles salvaram!", "estrelas" => 5],
+        ["nome" => "Vanessa M.", "mensagem" => "Serviço impecável. Equipe profissional e super atenciosa.", "estrelas" => 5],
+        ["nome" => "Carlos T.", "mensagem" => "Rápido, limpo e eficiente. Muito obrigado!", "estrelas" => 4],
+        ["nome" => "Juliana R.", "mensagem" => "Empresa séria, amei o resultado! Recomendo para todos.", "estrelas" => 5],
+      ];
+
+      foreach ($depoimentos as $dep) {
+        $estrelas = str_repeat("★", $dep['estrelas']) . str_repeat("☆", 5 - $dep['estrelas']);
+        echo "
+        <div style='background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08);'>
+          <div style='font-weight: bold; color: #0077cc; margin-bottom: 0.5rem;'>{$dep['nome']}</div>
+          <div style='color: #ffaa00; font-size: 1.2rem; margin-bottom: 0.5rem;'>$estrelas</div>
+          <div style='color: #333;'>{$dep['mensagem']}</div>
+        </div>
+        ";
+      }
+    ?>
+  </div>
+</section>
 
   <footer class="footer">
     <div class="social-highlight">
@@ -192,6 +239,7 @@
   // Inicia com o primeiro slide
   mostrarSlide(slideAtual);
 </script>
+
 
 </body>
 </html>
