@@ -65,10 +65,10 @@
   <div class="biografia-texto">
     <h2>Sobre Mim</h2>
     
-    <p>Nome:Guilherme Costa</p>
+    <p>Nome:Guilherme Da Silva Costa</p>
     <p>Idade: 18 anos</p>
-    <p>Hobbie:Jogar Bola</p>
-    <p>Cursando Engenharia Civil</p>
+    <p>Hobbie:Jogar futebol</p>
+    <p>Cursa: Engenharia Civil | UTFPR</p>
     <p></p>
 
  
@@ -76,6 +76,7 @@
 
   </div>
 </section>
+
 <section>
   <h1 class="titulo-centralizado">Antes e Depois de nossos Serviços</h1>
  <div class="carousel">
@@ -151,6 +152,7 @@
       updateSlide();
     }
   </script>
+<br>
 <style>
     body {
       background-color: #f2f2f2;
@@ -262,6 +264,7 @@
         <option value="poltrona">Poltrona</option>
         <option value="cadeira">Cadeira</option>
         <option value="banco-carro">Banco de Carro</option>
+        <option value="banco-carro">Outros</option>
       </select>
     </div>
 
