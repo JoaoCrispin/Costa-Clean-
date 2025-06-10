@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/Logo Costa Clean.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
   <header>
@@ -149,28 +151,138 @@
       updateSlide();
     }
   </script>
-<section id="contato" class="contato">
-  <div class="container">
-    <h2>Contato</h2>
-    <form action="https://formspree.io/f/mvgroewk" method="POST">
-      <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
+<style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .formulario-contato {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .campo-form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .campo-form label {
+      width: 150px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .campo-form i {
+      margin-right: 6px;
+      color: #007bff;
+    }
+
+    .campo-form input,
+    .campo-form select,
+    .campo-form textarea {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button i {
+      margin-right: 8px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Contato</h2>
+  <form action="https://formspree.io/f/mvgroewk" method="POST" class="formulario-contato">
+
+    <div class="campo-form">
+      <label for="nome"><i class="fas fa-user"></i> Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="campo-form">
+      <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="campo-form">
+      <label for="telefone"><i class="fas fa-phone"></i> Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+    </div>
+
+    <div class="campo-form">
+      <label for="estofado"><i class="fas fa-couch"></i> Estofado:</label>
+      <select id="estofado" name="estofado" required>
+        <option value="">Selecione</option>
+        <option value="sofa">Sofá</option>
+        <option value="poltrona">Poltrona</option>
+        <option value="cadeira">Cadeira</option>
+        <option value="banco-carro">Banco de Carro</option>
+      </select>
+    </div>
+
+    <div class="campo-form">
+      <label for="endereco"><i class="fas fa-map-marker-alt"></i> Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+    </div>
+
+    <div class="campo-form">
+      <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+    </div>
+
+    <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+  </form>
+</div>
+
 </section>
-</form>
-  </section>
+
+
+  
   <section id="depoimentos" style="padding: 3rem 1rem; background-color: #f4f9ff;">
   <h2 style="text-align: center; color: #0077cc; font-size: 2rem; margin-bottom: 2rem;">Depoimentos de Clientes</h2>
   
