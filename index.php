@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="img/Logo Costa Clean.png" type="image/png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -236,7 +237,7 @@
   </style>
 </head>
 <body>
-
+<section id="contato" class="section">
 <div class="container">
   <h2>Contato</h2>
   <form action="https://formspree.io/f/mvgroewk" method="POST" class="formulario-contato">
@@ -313,6 +314,41 @@
     ?>
   </div>
 </section>
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="text-primary mb-5">Por que escolher a Costa Clean?</h2>
+    <div class="row g-4">
+      <div class="col-md-15">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+            <h5 class="card-title">Garantia de Satisfação</h5>
+            <p class="card-text">Se você não ficar satisfeito, refazemos o serviço sem custo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-15">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-leaf fa-2x text-primary mb-3"></i>
+            <h5 class="card-title">Produtos Sustentáveis</h5>
+            <p class="card-text">Usamos produtos biodegradáveis e seguros para crianças e pets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-15">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-user-check fa-2x text-primary mb-3"></i>
+            <h5 class="card-title">Equipe de Confiança</h5>
+            <p class="card-text">Profissional treinado, uniformizado e pontual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <footer class="footer">
     <div class="social-highlight">
