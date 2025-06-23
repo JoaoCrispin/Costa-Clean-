@@ -1,3 +1,7 @@
+<?php
+ include "array.php";
+ $base = "https://{$_SERVER['SERVER_NAME']}{$_SERVER['SCRIPT_NAME']}";
+ ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -69,7 +73,7 @@
     <p>Nome:Guilherme Da Silva Costa</p>
     <p>Idade: 18 anos</p>
     <p>Hobbie:Jogar futebol</p>
-    <p>Cursa: Engenharia Civil | UTFPR</p>
+    <p>Curso: Engenharia Civil | UTFPR</p>
     <p></p>
 
  
